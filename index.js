@@ -10,6 +10,7 @@ const httpJsonBodyParserMiddleware = () => {
         ? Buffer.from(body, 'base64').toString()
         : body;
 
+      console.log({ from: data });
       request.event.body = JSON.parse(data);
       console.log({ got: request.event.body });
     } catch (err) {
