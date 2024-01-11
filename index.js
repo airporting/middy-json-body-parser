@@ -1,13 +1,12 @@
 const httpJsonBodyParserMiddleware = () => {
   async function before(request) {
-    console.log(request);
     try {
       const { body } = request.event;
 
       console.log('will parse body');
       console.log('body', body);
       const data = request.event.isBase64Encoded
-        ? Buffer.from(body, 'base64').toString()
+        ? Buffer.from(body, 'base64').toString('ascii')
         : body;
 
       console.log({ from: data });
