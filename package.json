@@ -11,6 +11,7 @@
   },
   "scripts": {
     "commit": "cz",
+    "crazy:up": "git pull && yarn set version latest && yarn up '*' && yarn install && yarn airnpm && git add package.json yarn.lock renovate.json && git status",
     "lint": "eslint . --ext .json,.js",
     "postupgrade": "git add package.json yarn.lock",
     "prepare": "yarn airnpm && husky install",
@@ -34,8 +35,8 @@
     "@babel/core": "7.23.7",
     "@babel/eslint-parser": "7.23.3",
     "@babel/plugin-syntax-import-assertions": "7.23.3",
-    "@commitlint/cli": "18.4.4",
-    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/cli": "18.5.0",
+    "@commitlint/config-conventional": "18.5.0",
     "@jest/globals": "29.7.0",
     "@ngneat/falso": "7.1.1",
     "@types/jest": "29.5.11",
