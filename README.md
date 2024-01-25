@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Static Badge](https://img.shields.io/badge/coverage-100-brightgreen)
-![Static Badge](https://img.shields.io/badge/release-1.0.5-blue)
+![Static Badge](https://img.shields.io/badge/release-1.0.8-blue)
 [![test](https://github.com/airporting/middy-json-body-parser/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/airporting/middy-json-body-parser/actions/workflows/test.yml)
 
 Used by [Airporting](https://www.airporting.com)
