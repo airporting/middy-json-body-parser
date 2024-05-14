@@ -1,8 +1,8 @@
 # GENERATED FILE - Do not edit manually
-name: test
+name: check_pr
 'on':
   push:
-    branches:
+    branches-ignore:
       - main
 jobs:
   test:
@@ -29,6 +29,10 @@ jobs:
           npm -v
           echo "yarn"
           yarn -v
+          echo "yarn enableImmutableInstalls"
+          yarn config get enableImmutableInstalls
+      - name: Allow modify yarn.lock
+        run: yarn config set -H enableImmutableInstalls false
       - name: Install modules
         run: yarn install
       - name: Run lint tasks
