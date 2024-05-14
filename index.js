@@ -13,7 +13,7 @@ const httpJsonBodyParserMiddleware = () => {
       console.log({ from: data });
       request.event.body = JSON.parse(data);
       console.log({ got: request.event.body });
-    } catch (err) {
+    } catch {
       console.warn('Invalid or malformed JSON was provided');
     }
   }

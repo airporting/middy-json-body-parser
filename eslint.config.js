@@ -18,6 +18,7 @@ export default [
       ecmaVersion: 2023,
       sourceType: 'module',
       globals: {
+        Buffer: 'readonly',
         console: 'readonly',
         structuredClone: 'readonly',
         fetch: 'readonly',
